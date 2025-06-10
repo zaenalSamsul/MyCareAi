@@ -7,6 +7,9 @@ const CONFIG = {
   OBJECT_STORE_AUTH: 'auth',
   OBJECT_STORE_NOTES: 'notes',
   AUTH_STORAGE_KEY: 'mycare-access-token',
+
+  //chatbot configuration
+
 };
 
 export default CONFIG;
