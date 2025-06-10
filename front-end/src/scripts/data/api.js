@@ -1,111 +1,61 @@
-import CONFIG from '../config.js';
-import { getAuth } from '../utils/auth-api.js';
+const API_URL = 'https://mycare.yusufabdil.my.id';
 
-const ENDPOINTS = {
-  REGISTER: `${CONFIG.BASE_URL}/auth/register`,
-  LOGIN: `${CONFIG.BASE_URL}/auth/login`,
-  GOOGLE_LOGIN: `${CONFIG.BASE_URL}/auth/google`,
-  LOGOUT: `${CONFIG.BASE_URL}/auth/logout`,
+const getAuthHeaders = () => {
+  const token = localStorage.getItem('token'); // Ambil token dari localStorage
+  return token ? { Authorization: `Bearer ${token}` } : {};
 };
 
-class AuthAPI {
-  /**
-   * Mendaftarkan user baru dengan nama, email, dan password.
-   * @param {{ name: string, email: string, password: string }} param0
-   * @returns {Promise<{ error: boolean, data?: any, message?: string }>}
-   */
-  static async register({ name, email, password }) {
-    try {
-      const res = await fetch(ENDPOINTS.REGISTER, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password }),
-      });
+// Fungsi untuk melakukan POST dengan body JSON
+const postRequest = async (url, body) => {
+  const response = await fetch(`${API_URL}${url}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...getAuthHeaders(),
+    },
+    body: JSON.stringify(body),
+  });
 
-      const json = await res.json();
-      if (json.error || !res.ok) {
-        // Jika server mengembalikan error: true atau status bukan 2xx
-        return {
-          error: true,
-          message: json.message || `Register gagal (status ${res.status})`,
-        };
-      }
+  return await response.json();
+};
 
-      return { error: false, data: json };
-    } catch (err) {
-      return { error: true, message: err.message };
-    }
-  }
+// Fungsi untuk melakukan GET
+const getRequest = async (url) => {
+  const response = await fetch(`${API_URL}${url}`, {
+    method: 'GET',
+    headers: getAuthHeaders(),
+  });
 
-  /**
-   * Melakukan login dengan email dan password.
-   * @param {{ email: string, password: string }} param0
-   * @returns {Promise<{ error: boolean, data?: any, message?: string }>}
-   */
-  static async login({ email, password }) {
-    try {
-      const res = await fetch(ENDPOINTS.LOGIN, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
+  return await response.json();
+};
 
-      const json = await res.json();
-      if (json.error || !res.ok) {
-        return {
-          error: true,
-          message: json.message || `Login gagal (status ${res.status})`,
-        };
-      }
+// Fungsi untuk melakukan PUT
+const putRequest = async (url, body) => {
+  const response = await fetch(`${API_URL}${url}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      ...getAuthHeaders(),
+    },
+    body: JSON.stringify(body),
+  });
 
-      return { error: false, data: json };
-    } catch (err) {
-      return { error: true, message: err.message };
-    }
-  }
+  return await response.json();
+};
 
-  /**
-   * Membuka halaman login Google. 
-   */
-  static loginWithGoogle() {
-    // Mengarahkan browser user ke endpoint Google login
-    window.location.href = ENDPOINTS.GOOGLE_LOGIN;
-  }
+// Fungsi untuk melakukan DELETE
+const deleteRequest = async (url) => {
+  const response = await fetch(`${API_URL}${url}`, {
+    method: 'DELETE',
+    headers: getAuthHeaders(),
+  });
 
-  /**
-   * Melakukan logout. 
-   * Jika token metode email/password, hanya hapus di FE.
-   * Jika ingin memanggil endpoint logout (misalnya untuk Google),
-   * gunakan token dari getAuth().
-   * @returns {Promise<{ error: boolean, message?: string }>}
-   */
-  static async logout() {
-    try {
-      const auth = getAuth();
-      // Jika tidak ada token, cukup kembalikan sukses
-      if (!auth || !auth.token) {
-        return { error: false };
-      }
+  return await response.json();
+};
 
-      // Panggil endpoint logout agar server bisa melakukan revoke (jika diperlukan)
-      const res = await fetch(ENDPOINTS.LOGOUT, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${auth.token}`,
-        },
-      });
-
-      // Kita abaikan body response; jika error, masih lanjut bersihkan token
-      if (!res.ok) {
-        console.warn(`Logout endpoint returned ${res.status}`);
-      }
-
-      return { error: false };
-    } catch (err) {
-      // Meski fetch error, kita tetap anggap logout berhasil di FE
-      return { error: false };
-    }
-  }
-}
-
-export default AuthAPI;
+export {
+  postRequest,
+  getRequest,
+  putRequest,
+  deleteRequest,
+};

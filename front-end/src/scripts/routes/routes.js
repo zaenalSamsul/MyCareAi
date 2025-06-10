@@ -1,33 +1,15 @@
-// src/main.js
+import HomePage from '../pages/home/home-page.js';
+import LoginPage from '../pages/login/loginPage.js';
+import RegisterPage from '../pages/Register/RegisterPage.js';
+import ChatPageView from '../pages/chatbot/chat-page.js';
+import ArticlePage from '../pages/article/article-page.js';
 
-import RegisterPage from './pages/register-page.js';
-import LoginPage from './pages/login-page.js'; // jika sudah buat login-page.js
-import HomePage from './pages/home-page.js';  // nanti implementasikan
-
-// Elemen outlet SPA
-const outlet = document.getElementById('app');
-const router = async () => {
-  const hash = window.location.hash.slice(1).toLowerCase();
-  switch (hash) {
-    case 'register':
-      outlet.innerHTML = await RegisterPage.prototype.render();
-      await RegisterPage.prototype.afterRender();
-      break;
-    case 'login':
-      outlet.innerHTML = await LoginPage.prototype.render();
-      await LoginPage.prototype.afterRender();
-      break;
-    case '':
-    case '/':
-      outlet.innerHTML = await HomePage.prototype.render();
-      await HomePage.prototype.afterRender();
-      break;
-    default:
-      // jika rute tidak dikenali, arahkan ke home
-      window.location.hash = '#/';
-      break;
-  }
+const routes = {
+  '/': HomePage,          // Home Page sebagai halaman pertama
+  '/login': LoginPage,    // Halaman Login
+  '/register': RegisterPage,  // Halaman Register
+  '/chat': ChatPageView,  // Halaman Chatbot
+  '/article': ArticlePage,  // Halaman Artikel
 };
 
-window.addEventListener('hashchange', router);
-window.addEventListener('load', router);
+export default routes;

@@ -8,7 +8,7 @@ import {
   createErrorTemplate,
   createPageLoadingTemplate,
   handlePageTransition,
-} from '../utils/index.js';
+} from '../../utils/index.js';
 
 export default class RegisterPage {
   /**

@@ -1,7 +1,4 @@
-// CSS imports
-import '../styles/styles.css';
-
-import App from './pages/app';
+import App from './pages/app.js'; // Mengimpor kelas App yang mengelola aplikasi
 
 document.addEventListener('DOMContentLoaded', async () => {
   const app = new App({

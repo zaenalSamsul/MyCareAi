@@ -1,4 +1,4 @@
-import { getAuth } from "../../utils/auth-api";
+import { getAuthApi } from "../../utils/auth-api";
 
 export default class HomePage {
   async render() {
@@ -193,8 +193,6 @@ export default class HomePage {
       </footer>
     `;
   }
-
-  // Setelah render, lakukan aksi tambahan jika diperlukan (misalnya menambahkan event listener)
   async afterRender() {
     // Membuat ikon menggunakan lucide
     lucide.createIcons();

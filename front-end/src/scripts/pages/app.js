@@ -1,47 +1,25 @@
-import routes from '../routes/routes';
-import { getActiveRoute } from '../routes/url-parser';
+import routes from '../routes/routes.js'; // Mengimpor rute aplikasi
+import { getActiveRoute } from '../routes/url-parser.js'; // Mengimpor fungsi untuk mendapatkan rute aktif
 
-class App {
-  #content = null;
-  #drawerButton = null;
-  #navigationDrawer = null;
+export default class App {
+  #content = null; // Menyimpan elemen tempat konten akan dimuat
 
-  constructor({ navigationDrawer, drawerButton, content }) {
+  constructor({ content }) {
     this.#content = content;
-    this.#drawerButton = drawerButton;
-    this.#navigationDrawer = navigationDrawer;
-
-    this.#setupDrawer();
   }
 
-  #setupDrawer() {
-    this.#drawerButton.addEventListener('click', () => {
-      this.#navigationDrawer.classList.toggle('open');
-    });
-
-    document.body.addEventListener('click', (event) => {
-      if (
-        !this.#navigationDrawer.contains(event.target) &&
-        !this.#drawerButton.contains(event.target)
-      ) {
-        this.#navigationDrawer.classList.remove('open');
-      }
-
-      this.#navigationDrawer.querySelectorAll('a').forEach((link) => {
-        if (link.contains(event.target)) {
-          this.#navigationDrawer.classList.remove('open');
-        }
-      });
-    });
-  }
-
+  // Fungsi untuk merender halaman berdasarkan rute aktif
   async renderPage() {
-    const url = getActiveRoute();
-    const page = routes[url];
+    const url = getActiveRoute(); // Mendapatkan rute aktif
+    const page = routes[url]; // Mengambil halaman yang sesuai dengan rute
 
-    this.#content.innerHTML = await page.render();
-    await page.afterRender();
+    console.log('Page:', page);
+
+    if (page) {
+      this.#content.innerHTML = await page.render(); // Merender halaman yang dipilih
+      await page.afterRender(); // Menjalankan logika setelah render
+    } else {
+      console.error('Halaman tidak ditemukan');
+    }
   }
 }
-
-export default App;

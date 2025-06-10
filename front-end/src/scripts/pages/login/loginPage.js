@@ -1,14 +1,7 @@
-// src/pages/login-page.js
-
-import AuthAPI from '../data/api.js';
-import { setAuth } from '../utils/auth-api.js';
-import LoginPresenter from './login-presenter.js';
-import {
-  createLoadingTemplate,
-  createErrorTemplate,
-  createPageLoadingTemplate,
-  handlePageTransition,
-} from '../utils/index.js';
+import AuthAPI from '../../data/api.js';
+import { setAuth } from "../../utils/auth.js";
+import LoginPresenter from '../presenter/login-presenter.js';
+import { createPageLoadingTemplate, handlePageTransition } from '../../utils/index.js';
 
 export default class LoginPage {
   /**
@@ -76,12 +69,8 @@ export default class LoginPage {
       // Inisialisasi presenter
       const presenter = new LoginPresenter({
         view: {
-          showLoading: () => {
-            statusContainer.innerHTML = createLoadingTemplate('Memuat...');
-            loginForm.querySelector('button[type="submit"]').disabled = true;
-          },
           showError: (message) => {
-            statusContainer.innerHTML = createErrorTemplate(message);
+            statusContainer.innerHTML = `<div class="status-error"><p>${message}</p></div>`;
             loginForm.querySelector('button[type="submit"]').disabled = false;
           },
           showSuccess: () => {
