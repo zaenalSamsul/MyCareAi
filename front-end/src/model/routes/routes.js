@@ -1,5 +1,5 @@
 // src/main.js
-/*
+
 import RegisterPage from './pages/register-page.js';
 import LoginPage from './pages/login-page.js'; // jika sudah buat login-page.js
 import HomePage from './pages/home-page.js';  // nanti implementasikan
@@ -30,18 +30,4 @@ const router = async () => {
 };
 
 window.addEventListener('hashchange', router);
-window.addEventListener('load', router); */
-
-import LandingPage from './pages/home/landing-page.js';
-import ArticlePage from './pages/article/article-page.js';
-import ChatPage from './pages/chat/chat-page.js';
-import LoginPage from './pages/login/loginPage.js';
-
-const routes = {
-  '/': LandingPage, // Landing page sebagai default route
-  '/artikel': ArticlePage,
-  '/chat': ChatPage,
-  '/login': LoginPage,
-};
-
-export default routes;
+window.addEventListener('load', router);

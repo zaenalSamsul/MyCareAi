@@ -1,4 +1,4 @@
-import { getAuthApi } from "../../utils/auth-api";
+import { getAuth } from "../../utils/auth-api";
 
 export default class HomePage {
   async render() {
@@ -193,46 +193,13 @@ export default class HomePage {
       </footer>
     `;
   }
+
+  // Setelah render, lakukan aksi tambahan jika diperlukan (misalnya menambahkan event listener)
   async afterRender() {
     // Membuat ikon menggunakan lucide
     lucide.createIcons();
 
-    // Cek jika ada token di URL dan simpan ke localStorage
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get('token'); // Ambil token dari URL
-
-    if (token) {
-      localStorage.setItem('token', token);
-    }
-
-    // Mengecek apakah token ada di localStorage
-    const storedToken = localStorage.getItem('token');
-    const statusContainer = document.querySelector("#status-container");
-
-    if (storedToken) {
-      // Pengguna sudah login, tampilkan konten halaman utama
-      console.log("Pengguna sudah login");
-      statusContainer.innerHTML = `<div class="bg-green-50 border-l-4 border-green-500 p-4 mb-4">
-          <div class="flex">
-            <div class="ml-3">
-              <p class="text-sm text-green-700">Selamat datang! Anda sudah login.</p>
-            </div>
-          </div>
-        </div>`;
-    } else {
-      // Jika tidak ada token, arahkan ke halaman login atau tampilkan status belum login
-      console.log("Pengguna belum login");
-
-      // Tampilkan pesan atau arahkan ke halaman login jika belum login
-      statusContainer.innerHTML = `<div class="bg-red-50 border-l-4 border-red-500 p-4 mb-4">
-          <div class="flex">
-            <div class="ml-3">
-              <p class="text-sm text-red-700">Silakan login terlebih dahulu.</p>
-            </div>
-          </div>
-        </div>`;
-      window.location.hash = "#/login";  // Arahkan ke halaman login jika tidak ada token
-    }
+    // Menambahkan event listener untuk toggle accordion
     document.addEventListener("DOMContentLoaded", function () {
       const accordionButtons = document.querySelectorAll(".accordion-button");
 
@@ -241,9 +208,11 @@ export default class HomePage {
           const content = this.nextElementSibling;
           const icon = this.querySelector(".fa-chevron-down");
 
+          // Toggle current item
           content.classList.toggle("hidden");
           icon.classList.toggle("rotate-180");
 
+          // Update aria-expanded attribute
           const isExpanded = content.classList.contains("hidden") ? "false" : "true";
           this.setAttribute("aria-expanded", isExpanded);
         });

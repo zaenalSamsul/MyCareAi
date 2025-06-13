@@ -11,38 +11,27 @@ const AuthApi = {
     },
 
     async login({ email, password }) {
-        const response = await fetch(`${CONFIG.BASE_URL}/auth/login`, {
+        const response = await fetch(`$(CONFIG.BASE_URL)/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password }),
         });
         return response.json();
     },
-
     async googleLogin(tokenID) {
         const response = await fetch(`${CONFIG.BASE_URL}/auth/google`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ token: tokenID }),
         });
-
-        const result = await response.json();
-
-        // Pastikan token disimpan ke localStorage setelah login Google berhasil
-        if (result.success && result.data.token) {
-            localStorage.setItem("token", result.data.token);  // Menyimpan token di localStorage
-        }
-
-        return result;
+        return response.json();
     },
-
     async logout(token) {
-        const response = await fetch(`${CONFIG.BASE_URL}/auth/logout`, {
+        const response = await fetch(`$(CONFIG.BASE_URL)/auth/logout`, {
             method: 'POST',
             headers: { 'Authorization': `Bearer ${token}` },
         });
         return response.json();
     },
 };
-
 export default AuthApi;

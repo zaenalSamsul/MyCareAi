@@ -1,3 +1,5 @@
+// src/pages/login-presenter.js
+
 export default class LoginPresenter {
     /**
      * @param {object} params
@@ -33,15 +35,5 @@ export default class LoginPresenter {
 
         // Tampilkan success di View (View akan mengatur redirect)
         this._view.showSuccess();
-    }
-    async handleGoogleLogin() {
-        const result = this._authAPI.handleGoogleLogin();
-
-        if (result.errot) {
-            this._view.showError(result.message);
-        } else {
-            this._setAuth({ token: result.data.token, user: result.data.user });
-            this._view.showSuccess();
-        }
     }
 }

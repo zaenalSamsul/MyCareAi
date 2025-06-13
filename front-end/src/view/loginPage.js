@@ -1,7 +1,14 @@
-import AuthAPI from '../../data/api.js';
-import { setAuth } from "../../utils/auth.js";
-import LoginPresenter from '../presenter/login-presenter.js';
-import { createPageLoadingTemplate, handlePageTransition } from '../../utils/index.js';
+// src/pages/login-page.js
+
+import AuthAPI from '../data/api.js';
+import { setAuth } from '../utils/auth-api.js';
+import LoginPresenter from './login-presenter.js';
+import {
+  createLoadingTemplate,
+  createErrorTemplate,
+  createPageLoadingTemplate,
+  handlePageTransition,
+} from '../utils/index.js';
 
 export default class LoginPage {
   /**
@@ -60,28 +67,21 @@ export default class LoginPage {
 
       // Jika klik tombol Google → langsung redirect ke endpoint Google
       if (googleButton) {
-        googleButton.addEventListener('click', async (e) => {
+        googleButton.addEventListener('click', (e) => {
           e.preventDefault();
-          this._authAPI.loginWithGoogle();
+          AuthAPI.loginWithGoogle();
         });
       }
-
-      if (window.location.search.includes('token')) {
-        const result = this._authAPI.handleGoogleCallback();
-        if (result.error) {
-          statusContainer.innerHTML = createErrorTemplate(result.message);
-        } else {
-          statusContainer.innerHTML = createSuccessTemplate(result.message);
-          window.location.hash = "#/";  // Arahkan ke halaman utama
-        }
-      }
-
 
       // Inisialisasi presenter
       const presenter = new LoginPresenter({
         view: {
+          showLoading: () => {
+            statusContainer.innerHTML = createLoadingTemplate('Memuat...');
+            loginForm.querySelector('button[type="submit"]').disabled = true;
+          },
           showError: (message) => {
-            statusContainer.innerHTML = `<div class="status-error"><p>${message}</p></div>`;
+            statusContainer.innerHTML = createErrorTemplate(message);
             loginForm.querySelector('button[type="submit"]').disabled = false;
           },
           showSuccess: () => {
