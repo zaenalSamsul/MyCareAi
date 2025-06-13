@@ -1,0 +1,5 @@
+Flask
+tensorflow==2.16.1
+numpy==1.26.4
+googletrans==4.0.0-rc1
+gunicorn
