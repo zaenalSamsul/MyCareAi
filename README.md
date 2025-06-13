@@ -1,22 +1,22 @@
 # MyCare AI: Asisten Kesehatan Mental Berbasis AI
 
 <p align="center">
-<img src="[MyCareAi](https://github.com/zaenalSamsul/MyCareAi/blob/main/MyCareAi.png)" alt="MyCare AI Logo" width="150">
+  <img src="https://github.com/zaenalSamsul/MyCareAi/blob/main/MyCareAi.png" alt="MyCare AI Logo" width="150">
 </p>
 
 <p align="center">
-Empati, Wawasan, dan Dukungan Personal dalam Genggaman Anda.
-<br />
-<a href="URL_WEBSITE_netlifyly_ANDA"><strong>Lihat Live Demo »</strong></a>
-<br />
-<br />
+  Empati, Wawasan, dan Dukungan Personal dalam Genggaman Anda.  
+  <br />  
+  <a href="URL_WEBSITE_netlifyly_ANDA"><strong>Lihat Live Demo »</strong></a>  
+  <br />  
+  <br />  
 </p>
 
 <p align="center">
-<img src="" alt="React">
-<img src="" alt="Backend">
-<img src="" alt="Vertex AI">
-<img src="" alt="Deployment">
+  <img src="" alt="React">  
+  <img src="" alt="Backend">  
+  <img src="" alt="Vertex AI">  
+  <img src="" alt="Deployment">  
 </p>
 
 ## Daftar Isi
