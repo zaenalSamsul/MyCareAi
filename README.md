@@ -13,10 +13,12 @@ Empati, Wawasan, dan Dukungan Personal dalam Genggaman Anda.
 </p>
 
 <p align="center">
-<img src="" alt="React">
-<img src="" alt="Backend">
-<img src="" alt="Vertex AI">
-<img src="" alt="Deployment">
+<img src="https://www.google.com/imgres?q=react%20logo&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fa%2Fa7%2FReact-icon.svg%2F2300px-React-icon.svg.png&imgrefurl=https%3A%2F%2Fen.m.wikipedia.org%2Fwiki%2FFile%3AReact-icon.svg&docid=f37ex3LPb9a9oM&tbnid=4fP0joQQKRm5dM&vet=12ahUKEwibyvKRvO2NAxVkIEQIHeUQCWEQM3oECB0QAA..i&w=2300&h=2000&hcb=2&ved=2ahUKEwibyvKRvO2NAxVkIEQIHeUQCWEQM3oECB0QAA" alt="React">
+<img src="https://www.google.com/imgres?q=javascript&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F99%2FUnofficial_JavaScript_logo_2.svg%2F1200px-Unofficial_JavaScript_logo_2.svg.png&imgrefurl=https%3A%2F%2Fjv.wikipedia.org%2Fwiki%2FJavaScript&docid=FwkNyZBMPJ-3EM&tbnid=QCGlzDi_SGuUOM&vet=12ahUKEwiP8ImpvO2NAxWYLEQIHc5jNM0QM3oECBwQAA..i&w=1200&h=1200&hcb=2&ved=2ahUKEwiP8ImpvO2NAxWYLEQIHc5jNM0QM3oECBwQAA" alt="JavaScript">
+<img src="https://www.google.com/imgres?q=VertexAi&imgurl=https%3A%2F%2Fcdn.prod.website-files.com%2F657639ebfb91510f45654149%2F67cef0fb78a461a1580d3c5a_667f5f1018134e3c5a8549c2_AD_4nXfn52WaKNUy839wUllpITpaj7mvuOTR6AOzDk3SypLHLgO-_n8zgt7QJ7rxcLOfOJRWAShjk1dIZRmwuKYLCYFD4qgOq1SCiGFIYbnhDLjD1E0zTdb8cgnCBceLMy7lmCZ3qDUce-gCfJjofiZ9ftDF2m4.jpeg&imgrefurl=https%3A%2F%2Ftranslate.google.com%2Ftranslate%3Fu%3Dhttps%3A%2F%2Fwww.voiceflow.com%2Fblog%2Fvertex-ai%26hl%3Did%26sl%3Den%26tl%3Did%26client%3Dimgs&docid=VF98LgVX0QT9IM&tbnid=RhFsix4XfUpIxM&vet=12ahUKEwiS_pe5vO2NAxVql-4BHR-zEt4QM3oECB4QAA..i&w=790&h=530&hcb=2&ved=2ahUKEwiS_pe5vO2NAxVql-4BHR-zEt4QM3oECB4QAA" alt="Vertex AI">
+<img src="https://www.google.com/imgres?q=docker&imgurl=https%3A%2F%2Feranyacloud.com%2Fwp-content%2Fuploads%2F2024%2F02%2FApa-itu-Docker-adalah.png&imgrefurl=https%3A%2F%2Feranyacloud.com%2Fid%2Fblog%2Fdocker-adalah%2F&docid=CUlo-XmXCS0QCM&tbnid=FMPyFi3aEFnaVM&vet=12ahUKEwjC_4_KvO2NAxUoJUQIHca2OMIQM3oECHMQAA..i&w=581&h=505&hcb=2&ved=2ahUKEwjC_4_KvO2NAxUoJUQIHca2OMIQM3oECHMQAA" alt="Docker">
+<img src="https://www.google.com/imgres?q=Netfly&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F97%2FNetlify_logo_%25282%2529.svg&imgrefurl=https%3A%2F%2Fid.wikipedia.org%2Fwiki%2FNetlify&docid=bo-WSh_rc0mVZM&tbnid=kVfG3nm2p1-IYM&vet=12ahUKEwj3nr7svO2NAxUhPEQIHSyhIrQQM3oECBwQAA..i&w=512&h=209&hcb=2&ved=2ahUKEwj3nr7svO2NAxUhPEQIHSyhIrQQM3oECBwQAA" alt="Netfly">
+<img src="https://www.google.com/imgres?q=python&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F0a%2FPython.svg%2F800px-Python.svg.png&imgrefurl=https%3A%2F%2Fen.wikiversity.org%2Fwiki%2FPython&docid=k36Oe0TGOvdiNM&tbnid=OgoGKg_x7PHeIM&vet=12ahUKEwjw69OUve2NAxW6IEQIHavIBR0QM3oECBYQAA..i&w=800&h=800&hcb=2&ved=2ahUKEwjw69OUve2NAxW6IEQIHavIBR0QM3oECBYQAA" alt="Deployment">
 </p>
 
 ## Daftar Isi
