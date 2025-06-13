@@ -165,4 +165,4 @@ Catat URL yang dihasilkan.
 ```
 
 ## 9. Tim Pengembang
-Aplikasi ini dikembangkan dengan penuh dedikasi oleh Tim CF025 - CC011 sebagai bagian dari program [CODING CAMP POWERED BY DBS FOUNDATION 2025].
+Aplikasi ini dikembangkan dengan penuh dedikasi oleh Tim CF025 - CC011 sebagai bagian dari program CODING CAMP POWERED BY DBS FOUNDATION 2025.
