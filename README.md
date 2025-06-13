@@ -1,7 +1,7 @@
 # MyCare AI: Asisten Kesehatan Mental Berbasis AI
 
 <p align="center">
-<img src="https://github.com/zaenalSamsul/MyCareAi/blob/main/MyCareAi.png" alt="MyCare AI Logo" width="600">
+<img src="https://github.com/zaenalSamsul/MyCareAi/blob/main/MyCareAi.png" alt="MyCare AI Logo" width="1200">
 </p>
 
 <p align="center">
@@ -13,13 +13,14 @@ Empati, Wawasan, dan Dukungan Personal dalam Genggaman Anda.
 </p>
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" width="100">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript Logo" width="100">
-  <img src="https://cdn.prod.website-files.com/657639ebfb91510f45654149/67cef0fb78a461a1580d3c5a_AD_4nXfn52WaKNUy839wUllpITpaj7mvuOTR6AOzDk3SypLHLgO-_n8zgt7QJ7rxcLOfOJRWAShjk1dIZRmwuKYLCYFD4qgOq1SCiGFIYbnhDLjD1E0zTdb8cgnCBceLMy7lmCZ3qDUce-gCfJjofiZ9ftDF2m4.jpeg" alt="Vertex AI Logo" width="100">
-  <img src="https://eranyacloud.com/wp-content/uploads/2024/02/Apa-itu-Docker-adalah.png" alt="Docker Logo" width="100">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Netlify_logo_%282%29.svg" alt="Netlify Logo" width="100">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg" alt="Python Logo" width="100">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" width="50">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript Logo" width="50">
+  <img src="https://lh3.googleusercontent.com/e5M3Bi_o8iVajobAcS0LLDDJ2RN4LzchraKjfEKWvXaTkBw2WU50kuTnF6xHzMOifL6DMe16SCUqNt5w2gB9ZA" alt="Vertex AI Logo" width="50">
+  <img src="https://eranyacloud.com/wp-content/uploads/2024/02/Apa-itu-Docker-adalah.png" alt="Docker Logo" width="50">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Netlify_logo_%282%29.svg" alt="Netlify Logo" width="50">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg" alt="Python Logo" width="50">
 </p>
+
 
 ## Daftar Isi
 - [Latar Belakang](#1-latar-belakang)
