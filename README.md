@@ -1,7 +1,7 @@
 # MyCare AI: Asisten Kesehatan Mental Berbasis AI
 
 <p align="center">
-<img src="MyCareAi" alt="MyCare AI Logo" width="150">
+<img src="[MyCareAi](https://github.com/zaenalSamsul/MyCareAi/blob/main/MyCareAi.png)" alt="MyCare AI Logo" width="150">
 </p>
 
 <p align="center">
